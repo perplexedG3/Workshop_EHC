@@ -9,9 +9,9 @@
         $flag = md5($flag);
         $query = "SELECT flag FROM flags WHERE md5(flag) = '$flag'";
         if (mysqli_num_rows($result) <= 0) {
-            echo "Correct,Congratulation!";
+            echo "Incorrect!";            
         } else {
-            echo "Incorrect!";
+            echo "Correct,Congratulation!";
         }
     }
 
