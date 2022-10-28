@@ -49,3 +49,5 @@ if (!$regex1 && !$regex2) {
 }
 
 $connect->close();
+
+?>
