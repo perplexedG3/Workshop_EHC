@@ -1,13 +1,8 @@
 <?php
     require './function.php';
-    if(isset($_GET['id'])){
-        if(is_numeric($_GET['id']) && $_GET['id'] <=5){
-            $results = get_chall_by_id($_GET['id']);
-        } else {
-            $_GET['id'] = 1;
-            $results = get_chall_by_id($_GET['id']);
-        }
-    }else{
+    if(isset($_GET['id']) && is_numeric($_GET['id']) && $_GET['id'] <=5){
+        $results = get_chall_by_id($_GET['id']);
+    } else {
         $_GET['id'] = 1;
         $results = get_chall_by_id($_GET['id']);
     }
