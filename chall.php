@@ -1,6 +1,11 @@
 <?php
-require './function.php';
-$results = get_chall_by_id($_GET['id']);
+    require './function.php';
+    if(is_numeric($_GET['id']) && $_GET['id'] <=5){
+        $results = get_chall_by_id($_GET['id']);
+    } else {
+        $_GET['id'] = 1;
+        $results = get_chall_by_id($_GET['id']);
+    }
 ?>
 
 <?php
