@@ -1,6 +1,6 @@
 <?php
     require './function.php';
-    if(isset($_GET['id']) && is_numeric($_GET['id']) && $_GET['id'] <=5){
+    if(isset($_GET['id']) && is_numeric($_GET['id']) && $_GET['id'] >=1 && $_GET['id'] <=7){
         $results = get_chall_by_id($_GET['id']);
     } else {
         $_GET['id'] = 1;
