@@ -1,0 +1,7 @@
+# enable basic rewriting
+RewriteEngine on
+
+DirectoryIndex challenges.php
+
+RewriteRule ^(([^/]+/)*[^.]+)$ /$1.php [L]
+Header add Content-Security-Policy "policy"
