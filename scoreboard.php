@@ -30,7 +30,6 @@ disconnect_db();
               crossorigin="anonymous" referrerpolicy="no-referrer" />
         <script src="https://cdn.tailwindcss.com"></script>
         <link rel="stylesheet" href="./css/style.css">
-        <title>Cresent</title>
         <script>
             tailwind.config = {
                 theme: {

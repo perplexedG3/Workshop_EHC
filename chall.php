@@ -66,7 +66,6 @@ disconnect_db();
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="./css/style.css">
-    <title>Crescent</title>
     <script>
         tailwind.config = {
             theme: {
@@ -99,7 +98,7 @@ disconnect_db();
                 </div>
                 <form action="" method="POST">
                     <div class="flex flex-row items-center gap-3 pt-5">
-                        <label class="relative block">
+                        <label class="relative block w-[100%]">
                             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                                 width="15px" height="15px" viewBox="0 0 30 30" version="1.1"
                                 class="pointer-events-none w-6 h-6 absolute top-1/2 transform -translate-y-1/2 left-3">
@@ -111,7 +110,7 @@ disconnect_db();
                                 </g>
                             </svg>
                             <input style="font-family: 'Segoe UI', Arial, sans-serif;" type="text" name="flag" id="flag"
-                                class="bg-transparent text-white font-medium border border-white border-[2px] rounded-2xl px-[50px] py-3">
+                                class="bg-transparent text-white font-medium border border-white border-[2px] rounded-2xl px-[50px] py-3 w-[100%]">
                         </label>
                         <button type="submit" name="submit_flag"
                             class="text-white bg-transparent border border-white border-[2px] font-medium text-sm text-center inline-flex items-center mr-2 px-5 rounded-2xl h-[50px]">
