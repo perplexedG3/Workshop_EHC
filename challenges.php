@@ -49,84 +49,84 @@ disconnect_db();
             <h1 class="text-black text-[2rem]">Ethical Hackers Club</h1>
             <img src="./assets/logo.png" alt="logo" class="h-[60px]">
 
-            <div class="py-10 w-[100%]">
+            <div class="py-10 w-[95%]">
                 <div class="grid grid-cols-3 gap-10 py-5">
                     <?php if (check_submit($user_id, 1) === 0): ?>
                     <a href="./chall?id=1"
-                        class="block text-center underline-none bg-transparent border border-[1px] border-white text-white min-w-[200px] py-5 rounded-xl hover:bg-gray-100 hover:bg-opacity-30">
+                        class="block text-center underline-none bg-transparent text-xl font-semibold border border-[1px] border-white text-white min-w-[200px] py-12 rounded-xl hover:bg-gray-100 hover:bg-opacity-30">
                         <?php echo (get_chall_by_id(1)['Chall_name']); ?>
                     </a>
                     <?php else: ?>
                     <a href="./chall?id=1"
-                        class="block text-center underline-none bg-green-700 border border-[1px] border-white text-gray-300 min-w-[200px] py-5 rounded-xl hover:bg-gray-100 hover:bg-opacity-30">
+                        class="block text-center underline-none bg-green-700 border border-[1px] border-white text-gray-300 min-w-[200px] py-12 rounded-xl hover:bg-gray-100 hover:bg-opacity-30">
                         <?php echo (get_chall_by_id(1)['Chall_name']); ?>
                     </a>
                     <?php endif; ?>
                     <?php if (check_submit($user_id, 2) === 0): ?>
                     <a href="./chall?id=2"
-                        class="block text-center underline-none bg-transparent border border-[1px] border-white text-white min-w-[200px] py-5 rounded-xl hover:bg-gray-100 hover:bg-opacity-30">
+                        class="block text-center underline-none bg-transparent text-xl font-semibold border border-[1px] border-white text-white min-w-[200px] py-12 rounded-xl hover:bg-gray-100 hover:bg-opacity-30">
                         <?php echo (get_chall_by_id(2)['Chall_name']); ?>
                     </a>
                     <?php else: ?>
                     <a href="./chall?id=2"
-                        class="block text-center underline-none bg-green-700 border border-[1px] border-white text-gray-300 min-w-[200px] py-5 rounded-xl hover:bg-gray-100 hover:bg-opacity-30">
+                        class="block text-center underline-none bg-green-700 border border-[1px] border-white text-gray-300 min-w-[200px] py-12 rounded-xl hover:bg-gray-100 hover:bg-opacity-30">
                         <?php echo (get_chall_by_id(2)['Chall_name']); ?>
                     </a>
                     <?php endif; ?>
                 </div>
-                <div class="grid grid-cols-3 gap-10 py-5">
+                <div class="grid grid-cols-3 gap-10 py-12">
                     <?php if (check_submit($user_id, 3) === 0): ?>
                     <a href="./chall?id=3"
-                        class="block text-center underline-none bg-transparent border border-[1px] border-white text-white min-w-[200px] py-5 rounded-xl hover:bg-gray-100 hover:bg-opacity-30">
+                        class="block text-center underline-none bg-transparent text-xl font-semibold border border-[1px] border-white text-white min-w-[200px] py-12 rounded-xl hover:bg-gray-100 hover:bg-opacity-30">
                         <?php echo (get_chall_by_id(3)['Chall_name']); ?>
                     </a>
                     <?php else: ?>
                     <a href="./chall?id=3"
-                        class="block text-center underline-none bg-green-700 border border-[1px] border-white text-gray-300 min-w-[200px] py-5 rounded-xl hover:bg-gray-100 hover:bg-opacity-30">
+                        class="block text-center underline-none bg-green-700 border border-[1px] border-white text-gray-300 min-w-[200px] py-12 rounded-xl hover:bg-gray-100 hover:bg-opacity-30">
                         <?php echo (get_chall_by_id(3)['Chall_name']); ?>
                     </a>
                     <?php endif; ?>
                     <?php if (check_submit($user_id, 4) === 0): ?>
                     <a href="./chall?id=4"
-                        class="block text-center underline-none bg-transparent border border-[1px] border-white text-white min-w-[200px] py-5 rounded-xl hover:bg-gray-100 hover:bg-opacity-30">
+                        class="block text-center underline-none bg-transparent text-xl font-semibold border border-[1px] border-white text-white min-w-[200px] py-12 rounded-xl hover:bg-gray-100 hover:bg-opacity-30">
                         <?php echo (get_chall_by_id(4)['Chall_name']); ?>
                     </a>
                     <?php else: ?>
                     <a href="./chall?id=4"
-                        class="block text-center underline-none bg-green-700 border border-[1px] border-white text-gray-300 min-w-[200px] py-5 rounded-xl hover:bg-gray-100 hover:bg-opacity-30">
+                        class="block text-center underline-none bg-green-700 border border-[1px] border-white text-gray-300 min-w-[200px] py-12 rounded-xl hover:bg-gray-100 hover:bg-opacity-30">
                         <?php echo (get_chall_by_id(4)['Chall_name']); ?>
                     </a>
                     <?php endif; ?>
                     <?php if (check_submit($user_id, 5) === 0): ?>
                     <a href="./chall?id=5"
-                        class="block text-center underline-none bg-transparent border border-[1px] border-white text-white min-w-[200px] py-5 rounded-xl hover:bg-gray-100 hover:bg-opacity-30">
+                        class="block text-center underline-none bg-transparent text-xl font-semibold border border-[1px] border-white text-white min-w-[200px] py-12 rounded-xl hover:bg-gray-100 hover:bg-opacity-30">
                         <?php echo (get_chall_by_id(5)['Chall_name']); ?>
                     </a>
                     <?php else: ?>
                     <a href="./chall?id=5"
-                        class="block text-center underline-none bg-green-700 border border-[1px] border-white text-gray-300 min-w-[200px] py-5 rounded-xl hover:bg-gray-100 hover:bg-opacity-30">
+                        class="block text-center underline-none bg-green-700 border border-[1px] border-white text-gray-300 min-w-[200px] py-12 rounded-xl hover:bg-gray-100 hover:bg-opacity-30">
                         <?php echo (get_chall_by_id(5)['Chall_name']); ?>
                     </a>
                     <?php endif; ?>
                     <?php if (check_submit($user_id, 6) === 0): ?>
                     <a href="./chall?id=6"
-                        class="block text-center underline-none bg-transparent border border-[1px] border-white text-white min-w-[200px] py-5 rounded-xl hover:bg-gray-100 hover:bg-opacity-30">
+                        class="block text-center underline-none bg-transparent text-xl font-semibold border border-[1px] border-white text-white min-w-[200px] py-12 rounded-xl hover:bg-gray-100 hover:bg-opacity-30">
                         <?php echo (get_chall_by_id(6)['Chall_name']); ?>
                     </a>
                     <?php else: ?>
                     <a href="./chall?id=6"
-                        class="block text-center underline-none bg-green-700 border border-[1px] border-white text-gray-300 min-w-[200px] py-5 rounded-xl hover:bg-gray-100 hover:bg-opacity-30">
+                        class="block text-center underline-none bg-green-700 border border-[1px] border-white text-gray-300 min-w-[200px] py-12 rounded-xl hover:bg-gray-100 hover:bg-opacity-30">
                         <?php echo (get_chall_by_id(6)['Chall_name']); ?>
                     </a>
                     <?php endif; ?>
                     <?php if (check_submit($user_id, 7) === 0): ?>
                     <a href="./chall?id=7"
-                        class="block text-center underline-none bg-transparent border border-[1px] border-white text-white min-w-[200px] py-5 rounded-xl hover:bg-gray-100 hover:bg-opacity-30">
+                        class="block text-center underline-none bg-transparent text-xl font-semibold border border-[1px] border-white text-white min-w-[200px] py-12 rounded-xl hover:bg-gray-100 hover:bg-opacity-30">
                         <?php echo (get_chall_by_id(7)['Chall_name']); ?>
                     </a>
                     <?php else: ?>
                     <a href="./chall?id=7"
-                        class="block text-center underline-none bg-green-700 border border-[1px] border-white text-gray-300 min-w-[200px] py-5 rounded-xl hover:bg-gray-100 hover:bg-opacity-30">
+                        class="block text-center underline-none bg-green-700 border border-[1px] border-white text-gray-300 min-w-[200px] py-12 rounded-xl hover:bg-gray-100 hover:bg-opacity-30">
                         <?php echo (get_chall_by_id(7)['Chall_name']); ?>
                     </a>
                     <?php endif; ?>
