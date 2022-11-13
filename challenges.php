@@ -49,7 +49,7 @@ disconnect_db();
             <h1 class="text-black text-[2rem]">Ethical Hackers Club</h1>
             <img src="./assets/logo.png" alt="logo" class="h-[60px]">
 
-            <div class="py-10">
+            <div class="py-10 w-[100%]">
                 <div class="grid grid-cols-3 gap-10 py-5">
                     <?php if (check_submit($user_id, 1) === 0): ?>
                     <a href="./chall?id=1"
