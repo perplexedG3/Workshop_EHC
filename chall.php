@@ -80,13 +80,13 @@ disconnect_db();
 </head>
 
 <body>
-    <div id="main" class="bg-black h-[100vh] w-[100vw]">
+    <div id="main" class="bg-black h-[100vh] w-[100vw] relative">
         <div class="flex flex-col items-center py-10 h-[100%]">
             <a href="/" class="flex flex-col items-center">
                 <h1 class="text-black text-[2rem]">Ethical Hackers Club</h1>
                 <img src="./assets/logo.png" alt="logo" class="h-[60px]">
             </a>
-            <div class="md:w-[40%]">
+            <div class="md:w-[40%] absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
                 <div class="flex flex-col text-white">
                     <span class="text-xl py-5"><?php echo $results['Chall_name'] ?></span>
                     <span style="font-family: 'Segoe UI', Arial, sans-serif;">
