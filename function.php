@@ -76,6 +76,25 @@ function get_score() {
     return $result;
 }
 
+function get_score_byID($user_id) {
+    global $conn;
+    connectDB();
+
+    $regex1 = preg_match('/[\'"^£$%&*()}{@#~?><>,|=_+¬-]/', $user_id);
+
+        if (!$regex1) {            
+            $query = "SELECT score FROM users WHERE id = ?";       
+            $preparedStatement = $conn->prepare($query);
+            $preparedStatement->bind_param('i', $user_id);
+            $preparedStatement->execute();
+            $result = $preparedStatement->get_result();
+            $row = $result->fetch_assoc();   //$row["count"]
+            
+            $value = (int)$row["score"];
+        }
+    return $value;
+}
+
 function change_status_submition_by_id($user_id, $chall_id) {
     global $conn;
     connectDB();
