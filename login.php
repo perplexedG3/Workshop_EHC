@@ -27,7 +27,7 @@ if (isset($_POST['login'])) {
     $regex2 = preg_match('/[\'"^£$%&*()}{@#~?><>,|=_+¬-]/', $password);
     if (!$regex1 && !$regex2) {
 
-        $query = "SELECT id,username,password FROM users WHERE username = ? and password = ?";
+        $query = "SELECT id,username,password,score FROM users WHERE username = ? and password = ?";
 
         // use prepared statement to prevent SQL injection
         $preparedStatement = $conn->prepare($query);
@@ -42,9 +42,8 @@ if (isset($_POST['login'])) {
             //lưu tên đăng nhập
             $row = $result->fetch_assoc();
             $_SESSION['id'] = $row['id'];
-            $_SESSION['username'] = $row['username'];
-                
-            header("location: challenges");
+            $_SESSION['username'] = $row['username']; 
+            header("location: challenges.php");
         }
     } else {
         http_response_code(400);
@@ -89,7 +88,7 @@ disconnect_db();
                 <h1 class="text-black hidden md:block md:text-[3rem]">Ethical Hackers Club</h1>
                 <img src="./assets/logo.png" alt="logo" class="h-[150px]">
 
-                <form action="login.php" method="POST" class="pt-5">
+                <form action="login" method="POST" class="pt-5">
                     <div class="py-1">
                         <span class="text-white">Username</span>
                         <input type="text" name="username" id="username"
