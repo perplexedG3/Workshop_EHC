@@ -4,7 +4,7 @@ $results = get_score();
 
 session_start();
 if (!isset($_SESSION['id'])) {
-    echo '<script type="text/javascript">window.location = "./login"</script>';
+    echo '<script type="text/javascript">window.location = "./login.php"</script>';
 }
 
 $user_id = (int)$_SESSION['id'];
@@ -77,7 +77,7 @@ disconnect_db();
                     <?php endforeach; ?>
                 </div>
                 <div class="mt-auto">
-                    <a href="challenges"
+                    <a href="challenges.php"
                        class="flex flex-col justify-center items-center underline-none bg-transparent text-xl text-white min-w-[200px] hover:text-gray-100 ">
                         Challenges
                         <div class="mt-2"
