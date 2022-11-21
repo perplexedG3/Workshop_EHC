@@ -46,8 +46,8 @@ disconnect_db();
 </head>
 
 <body>
-    <div id="main" class="bg-black h-[100vh] w-[100vw]">
-        <div class="flex flex-col items-center py-10 w-[100%] h-[100%]">
+    <div id="main" class="bg-black">
+        <div class="flex flex-col items-center py-10 w-[100%] min-h-[100vh]">
             <h1 class="text-black text-[2rem]">Ethical Hackers Club</h1>
             <img src="./assets/logo.png" alt="logo" class="h-[60px]">
 
