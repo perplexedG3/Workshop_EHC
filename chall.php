@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 require './function.php';
 $chall_id = (int) $_GET['id'];
 if (isset($chall_id) && is_integer($chall_id) && $chall_id >= 1 && $chall_id <= 7) {
@@ -11,7 +11,7 @@ if (isset($chall_id) && is_integer($chall_id) && $chall_id >= 1 && $chall_id <= 
 <?php
 session_start();
 if (!isset($_SESSION['id'])) {
-    echo '<script type="text/javascript">window.location = "./login"</script>';
+    echo '<script type="text/javascript">window.location = "./login.php"</script>';
 }
 
 $user_id = (int) $_SESSION['id'];
@@ -20,10 +20,11 @@ update_score($user_id);
 ?>
 
 <?php
+
 if (isset($_POST['submit_flag'])) {
     $flag = $results['Flag'];
 
-    $check_flag = isset($_POST['flag']) ? ($_POST['flag']) : "";
+    $check_flag = hash('sha256',isset($_POST['flag']) ? ($_POST['flag']) : "");
 
     $regex = preg_match('/[\'"^£$%&*()@#~?<>,|=+¬-]/', $flag);
 
@@ -31,20 +32,20 @@ if (isset($_POST['submit_flag'])) {
         if ($flag === $check_flag  && $chall_id >= 1 && $chall_id <= 7) {
             if (check_submit($user_id, $chall_id) === 0) {
                 change_status_submition_by_id($user_id, $chall_id);
-                $message = "Correct";
+                $message = "Correct2";
                 echo "<script type='text/javascript'>alert('$message');</script>";
-                header("Location: ./challenges");
             } else {
-                $message = "Correct";
+                $message = "Correct3";
                 echo "<script type='text/javascript'>alert('$message');</script>";
-                header("Location: ./challenges");
             }
-        } else {
-            $message = "Incorrect";
-            echo "<script type='text/javascript'>alert('$message');</script>";
+            header('location: challenges');
         }
+        else {
+            $message = "Incorrect2";
+            echo "<script type='text/javascript'>alert('$message');</script>";
+        }                                                      
     } else {
-        $message = "Incorrect";
+        $message = "Incorrect3";
         echo "<script type='text/javascript'>alert('$message');</script>";
     }
 }
@@ -96,7 +97,7 @@ disconnect_db();
                         <?php echo $results['Hint'] ?>
                     </span>
                 </div>
-                <form action="" method="POST">
+                    <form action="" method="POST">
                     <div class="flex flex-row items-center gap-3 pt-5">
                         <label class="relative block w-[100%]">
                             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -109,9 +110,9 @@ disconnect_db();
                                         d="M 1.996094 0.78125 C 0.894531 0.78125 0 1.675781 0 2.777344 L 0 27.222656 C 0 28.324219 0.894531 29.21875 1.996094 29.21875 C 3.101562 29.21875 3.996094 28.324219 3.996094 27.222656 L 3.996094 2.777344 C 3.996094 1.675781 3.101562 0.78125 1.996094 0.78125 Z M 1.996094 0.78125 " />
                                 </g>
                             </svg>
-                            <input style="font-family: 'Segoe UI', Arial, sans-serif;" type="text" name="flag" id="flag"
-                                class="bg-transparent text-white font-medium border border-white border-[2px] rounded-2xl px-[50px] py-3 w-[100%]">
-                        </label>
+                            <input style="font-family: 'Segoe UI', Arial, sans-serif;" type="text" name="flag" id="flag" placeholder=" Enter flag"
+                                class="bg-transparent text-white font-medium border border-white border-[2px] rounded-2xl px-[50px] py-3 w-[100%]">                     
+                            </label>
                         <button type="submit" name="submit_flag"
                             class="text-white bg-transparent border border-white border-[2px] font-medium text-sm text-center inline-flex items-center mr-2 px-5 rounded-2xl h-[50px]">
                             <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
@@ -122,10 +123,11 @@ disconnect_db();
                             </svg>
                         </button>
                     </div>
-                </form>
+                    </form>
+
             </div>
             <div class="mt-auto">
-                <a href="challenges"
+                <a href="challenges.php"
                     class="flex flex-col justify-center items-center underline-none bg-transparent text-xl text-white min-w-[200px] hover:text-gray-100 ">
                     Challenges
                     <div class="mt-2" style="width: 0; height: 0; border-style: solid; border-width: 10px 60px 0 60px; border-color: #ffffff transparent transparent transparent;">
