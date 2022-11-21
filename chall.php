@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 require './function.php';
 $chall_id = (int) $_GET['id'];
 if (isset($chall_id) && is_integer($chall_id) && $chall_id >= 1 && $chall_id <= 7) {
@@ -81,8 +81,8 @@ disconnect_db();
 </head>
 
 <body>
-    <div id="main" class="bg-black h-[100vh] w-[100vw] relative">
-        <div class="flex flex-col items-center py-10 h-[100%]">
+    <div id="main" class="bg-black relative">
+        <div class="flex flex-col items-center py-10 min-h-[100vh]">
             <a href="/" class="flex flex-col items-center">
                 <h1 class="text-black text-[2rem]">Ethical Hackers Club</h1>
                 <img src="./assets/logo.png" alt="logo" class="h-[60px]">
