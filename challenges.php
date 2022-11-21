@@ -156,7 +156,7 @@ disconnect_db();
                     </div>
                 </a>
             </div>
-            <a href="/"
+            <a href="./logout.php"
                 class="fixed bottom-5 right-5 float-right text-white px-5 py-3 border border-white border-[3px] rounded-full hover:bg-gray-500 hover:bg-opacity-80">Logout</a>
         </div>
     </div>
